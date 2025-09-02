@@ -1,0 +1,152 @@
+/* About.css */
+.about {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+  color: #d1fae5;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.about-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  border: 2px solid rgba(253, 224, 71, 0.3);
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(250, 204, 21, 0.3);
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fef08a;
+  text-shadow: 0 0 10px rgba(254, 240, 138, 0.3);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.about-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #facc15, transparent);
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #a7f3d0;
+}
+
+.about-text strong {
+  color: #fef08a;
+  font-weight: 600;
+}
+
+.about-btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+  color: #022c22;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(250, 204, 21, 0.3);
+}
+
+.about-btn:hover {
+  background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.4);
+}
+
+.about-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 15px;
+  }
+
+  .about-container {
+    gap: 30px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-image img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for content */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-content {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about-image {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}

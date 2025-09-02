@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+/* Global styles */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #022c22; /* emerald-950 */
+  color: #d1fae5; /* emerald-100 */
+  line-height: 1.6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #022c22;
+  color: #d1fae5;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  min-height: calc(100vh - 160px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Utility classes */
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
+}
+
+.text-yellow-200 {
+  color: #fef9c3;
+}
+
+.text-yellow-300 {
+  color: #fef08a;
+}
+
+.text-emerald-100 {
+  color: #d1fae5;
+}
+
+.text-emerald-200 {
+  color: #a7f3d0;
+}
+
+.bg-emerald-950 {
+  background-color: #022c22;
+}
+
+.bg-emerald-900-60 {
+  background-color: rgba(6, 78, 59, 0.6);
+}
+
+.border-yellow-300-60 {
+  border-color: rgba(253, 224, 71, 0.6);
+}
+
+.border-emerald-700-60 {
+  border-color: rgba(6, 78, 59, 0.6);
+}
+
+.border-emerald-800-70 {
+  border-color: rgba(6, 95, 70, 0.7);
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(6, 78, 59, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(253, 224, 71, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(253, 224, 71, 0.6);
 }

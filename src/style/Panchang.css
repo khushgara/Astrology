@@ -1,0 +1,214 @@
+/* Panchang.css */
+.panchang {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+  color: #d1fae5;
+  text-align: center;
+}
+
+.panchang-container {
+  max-width: 100%;
+  margin: 0 50px;
+}
+
+.panchang-title {
+  font-size: 2.5rem;
+  color: #fef08a;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(254, 240, 138, 0.3);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.panchang-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #facc15, transparent);
+  border-radius: 2px;
+}
+
+.panchang-date {
+  font-size: 1.2rem;
+  color: #a7f3d0;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.panchang-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.panchang-card {
+  background: rgba(6, 78, 59, 0.4);
+  border: 1px solid rgba(253, 224, 71, 0.3);
+  padding: 25px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+}
+
+.panchang-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #facc15, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.panchang-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(250, 204, 21, 0.2);
+  border-color: rgba(253, 224, 71, 0.5);
+}
+
+.panchang-card:hover::before {
+  opacity: 1;
+}
+
+.panchang-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #fef08a;
+  font-weight: 600;
+}
+
+.panchang-card p {
+  font-size: 1.1rem;
+  color: #a7f3d0;
+  font-weight: 500;
+}
+
+.panchang-btn {
+  margin-top: 20px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+  color: #022c22;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(250, 204, 21, 0.3);
+  font-size: 1rem;
+}
+
+.panchang-btn:hover {
+  background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.4);
+}
+
+.panchang-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .panchang {
+    padding: 60px 15px;
+  }
+
+  .panchang-title {
+    font-size: 2rem;
+  }
+
+  .panchang-date {
+    font-size: 1.1rem;
+  }
+
+  .panchang-cards {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+
+  .panchang-card {
+    padding: 20px 15px;
+  }
+
+  .panchang-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .panchang-card p {
+    font-size: 1rem;
+  }
+
+  .panchang-btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .panchang-title {
+    font-size: 1.8rem;
+  }
+
+  .panchang-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .panchang-card {
+    padding: 18px 12px;
+  }
+
+  .panchang-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .panchang-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panchang-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.panchang-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.panchang-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.panchang-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.panchang-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.panchang-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.panchang-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
