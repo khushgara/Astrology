@@ -1,6 +1,6 @@
 // src/components/SolarSystem.js
-import React, { useRef, useState, Suspense } from "react";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import React, { useRef, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Stars, Text, Float } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -317,8 +317,8 @@ function InfoPanel({ selectedPlanet, setSelectedPlanet }) {
 // Main Solar System Component
 export default function SolarSystem() {
   const [selectedPlanet, setSelectedPlanet] = useState(null);
-  const [animationSpeed, setAnimationSpeed] = useState(1);
-  const [isPaused, setIsPaused] = useState(false);
+  const [animationSpeed] = useState(1);
+  const [isPaused] = useState(false);
 
   return (
     <div style={{ width: "100%", height: "100%", position: "relative" }}>
